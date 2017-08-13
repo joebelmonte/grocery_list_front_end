@@ -13,7 +13,9 @@ class ListsIndex extends Component {
     return _.map(this.props.lists, list => {
       return (
         <li className="list-group-item" key={list.id}>
-          {list.name}
+          <Link to={`/lists/${list.id}`}>
+            {list.name}
+          </Link>
         </li>
       )
     })
